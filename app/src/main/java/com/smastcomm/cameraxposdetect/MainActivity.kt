@@ -117,6 +117,8 @@ class MainActivity : AppCompatActivity() {
     override fun onDestroy() {
         super.onDestroy()
         cameraExecutor.shutdown()
+        poseDetector.close()
+        imageAnalysis.clearAnalyzer()
     }
 
     @SuppressLint("MissingPermission", "RestrictedApi")
