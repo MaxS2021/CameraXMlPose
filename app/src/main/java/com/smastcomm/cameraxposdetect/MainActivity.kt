@@ -89,9 +89,6 @@ class MainActivity : AppCompatActivity() {
 
 
             } else {
-                binding.startPose.setImageResource(R.drawable.ic_body)
-                cameraFacing = CameraSelector.DEFAULT_BACK_CAMERA
-
                 binding.parentLayout.removeAllViews()
 
                 binding.parentLayout.addView(binding.viewFinder)
@@ -102,6 +99,8 @@ class MainActivity : AppCompatActivity() {
                 binding.parentLayout.addView(binding.stoptVideo)
                 binding.parentLayout.addView(binding.capture)
 
+                binding.startPose.setImageResource(R.drawable.ic_body)
+                cameraFacing = CameraSelector.DEFAULT_BACK_CAMERA
             }
             poseDetectState = !poseDetectState
             startCamera()
